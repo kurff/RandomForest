@@ -16,7 +16,7 @@ public:
 
 	void Train();
 	void Apply(Mat& img, Mat& label);
-	int Apply0(Mat& img, int row, int col);
+	vector<int> Apply0(Mat& img, int row, int col);
 
 
 

@@ -29,12 +29,14 @@ void Forest::Save(char* file){
 
 }
 
-int Forest::Apply0(Mat& img, int row, int col){
+vector<int> Forest::Apply0(Mat& img, int row, int col){
 	int idx;
+	vector<int> idxs;
+	idx.resize(tree_number_);
 	for(int k = 0; k < tree_number_; k++ ){
-		idx = trees_[k].Apply0(img,row,col);       
+		idxs[i] = trees_[k].Apply0(img,row,col);       
 	}	
-    return idx;
+    return idxs;
 }
 
 void Forest::Apply(Mat& img, Mat& label){
